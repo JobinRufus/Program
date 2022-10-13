@@ -1,30 +1,15 @@
-class Leapyear {
-    public static void main(String[] args) {
-        
-        int year = 2020;
-        boolean leap = false;
-        
-        if (year % 4 == 0) {
-            
-            if (year % 100 == 0) {
-                
-                if (year % 400 == 0)
-                    leap = true;
-                else
-                    leap = false;
-            }
-            
-            else
-                leap = true;
-        }
-        else
-            leap = false;
-
-        if (leap)
-            System.out.println(year + " is a leap year.");
-		
-        else
-            System.out.println(year + " is not a leap year.");
-    }
+public class LeapYearExample {	
+ static void leapArea(int year){
+  //Check Leap year condition.
+  if((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
+	 System.out.println(year + ": Leap year.");
+  }else{
+	 System.out.println(year + ": Not a leap year.");
+  }
+ }	
+ 
+ public static void main(String args[]){ 
+  //method call 
+  leapArea(2016); 
+ }
 }
-
